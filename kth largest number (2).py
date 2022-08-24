@@ -1,28 +1,18 @@
-# Python3 code for program to
-# cyclically rotate an array by one
+# g
+def reverse(string):
+	string = list(string)
+	string.reverse()
+	return "".join(string)
 
-# Method for rotation
-def rotate(arr, n):
-    x = arr[n - 1]
+s = "Geeksforgeeks"
 
-    for i in range(n - 1, 0, -1)
-        arr[i] = arr[i - 1]
+print("The original string is : ", s)
 
-    arr[0] = x
+print("The reversed string(using reversed) is : ", reverse(s))
+
+# This code is contributed by Susobhan AKhuli
 
 
-# Driver function
-arr = [1, 2, 3, 4, 5]
-n = len(arr)
-print("Given array is")
-for i in range(0, n):
-    print(arr[i], end=' ')
-
-rotate(arr, n)
-
-print("\nRotated array is")
-for i in range(0, n):
-    print(arr[i], end=' ')
 
 
 
