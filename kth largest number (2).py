@@ -1,17 +1,27 @@
-# g
-def reverse(string):
-	string = list(string)
-	string.reverse()
-	return "".join(string)
+# Python program to convert a list
+# to string using join() function
 
-s = "Geeksforgeeks"
+# Function to convert
+'''def listToString(s):
+    # initialize an empty string
+    str1 = ""
 
-print("The original string is : ", s)
+    # return string
+   # str1.join(s)
+  #  return str1.join(s)
 
-print("The reversed string(using reversed) is : ", reverse(s))
 
-# This code is contributed by Susobhan AKhuli
+    return int(str1.join(s))+1
+   # return print(t)
 
+
+# Driver code
+#print(str1)
+s = ['3', '2', '1']
+print(listToString(s))'''
+s=123
+p=str(s)
+print(type(p))
 
 
 
