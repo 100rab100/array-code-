@@ -1,14 +1,30 @@
+# Python3 code for program to
+# cyclically rotate an array by one
 
-def linearSearch(arr, n):
-	for i in range(n):
-		if arr[i] is i:
-			return i
-	# If no fixed point present then return -1
-	return -1
+# Method for rotation
+def rotate(arr, n):
+    x = arr[n - 1]
 
-# Driver program to check above functions
-arr = [-10, -1, 0, 3, 10, 11, 30, 50, 100]
+    for i in range(n - 1, 0, -1)
+        arr[i] = arr[i - 1]
+
+    arr[0] = x
+
+
+# Driver function
+arr = [1, 2, 3, 4, 5]
 n = len(arr)
-print("Fixed Point is " + str(linearSearch(arr, n)))
+print("Given array is")
+for i in range(0, n):
+    print(arr[i], end=' ')
+
+rotate(arr, n)
+
+print("\nRotated array is")
+for i in range(0, n):
+    print(arr[i], end=' ')
+
+
+
 
 
