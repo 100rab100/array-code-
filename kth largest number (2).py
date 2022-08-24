@@ -1,23 +1,18 @@
-# first approach
-class Solution:
-    def findKthLargest(self, nums: List[int], k: int) -> int:
 
-        nums.sort( reverse = True )
-        
-        return nums[k-1]
-      
-#2 approach
+def getPairsCount(arr, n, sum):
 
-def findKthLargest(nums: list[int], k: int) -> int:
-    ans = 0
-    for i in range(k):
-        ans = max(nums)
-        nums.remove(ans)
+	count = 0 # Initialize result
 
-    return ans
+	for i in range(0, n):
+		for j in range(i + 1, n):
+			if arr[i] + arr[j] == sum:
+				count += 1
 
-nums = [3,2,1,5,6,4]
-k = 2
-print(findKthLargest(nums,k))
+	return count
 
-#Output: 5
+
+# Driver function
+arr = [1, 5, 7, -1, 5]
+n = len(arr)
+sum = 6
+print("Count of pairs is",getPairsCount(arr, n, sum))
