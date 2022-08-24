@@ -1,18 +1,27 @@
 
-num = 2
-# define a flag variable
-flag = False
+def areRotations(string1, string2):
+	size1 = len(string1)
+	size2 = len(string2)
+	temp = ''
 
-if num > 1:
-    # check for factors
-    for i in range(2, num//2+1):
-        if (num % i) == 0:
-            # if factor is found, set flag to True
-            flag = True
-            # break out of loop
-            break
+	# Check if sizes of two strings are same
+	if size1 != size2:
+		return 0
 
-if flag:
-    print(num, "is not a prime number")
+	# Create a temp string with value str1.str1
+	temp = string1 + string1
+
+	if (temp.count(string2)> 0):
+		return 1
+	else:
+		return 0
+
+# Driver program to test the above function
+string1 = "AACD"
+string2 = "ACDA"
+
+if areRotations(string1, string2):
+	print ("Strings are rotations of each other")
 else:
-    print(num, "is a prime number")
+	print ("Strings are not rotations of each other")
+
