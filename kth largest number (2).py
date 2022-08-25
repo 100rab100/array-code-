@@ -1,30 +1,15 @@
-# Python program to convert a list
-# to string using join() function
+def bsdk(nums, target):
+    for i in range(n):
 
-# Function to convert
-'''def listToString(s):
-    # initialize an empty string
-    str1 = ""
+        for j in range(i + 1, n):
+           if target == nums[i] + nums[j]:
+               return ([i,j])
+              # break
 
-    # return string
-   # str1.join(s)
-  #  return str1.join(s)
+          #  return [i,j]
 
 
-    return int(str1.join(s))+1
-   # return print(t)
-
-
-# Driver code
-#print(str1)
-s = ['3', '2', '1']
-print(listToString(s))'''
-s=123
-p=str(s)
-print(type(p))
-
-
-
-
-
-
+nums = [2,7,11,15]
+n = len(nums)
+target = 9
+print(bsdk(nums, target))
