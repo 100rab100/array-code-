@@ -1,10 +1,9 @@
-class Solution:
-    def kthFactor(self, n: int, k: int) -> int:
-        count = 0
-        for i in range(1,n+1):
-            if n%i == 0:
-                count+=1
-            if count == k:
-                return i
-        return -1
-        
+def subsets( nums):
+    res = [[]]
+    for n in nums:
+        for i in range(len(res)):
+            res.append(res[i] + [n])
+            print(res)
+    return res
+nums=[1,2]
+print(subsets(nums))
