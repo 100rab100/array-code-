@@ -1,27 +1,23 @@
 # Python3 program to print
 # all primes less than N
 
-# Function to check whether
-# a number is prime or not .
-def isPrime(n):
-    # Corner case
-    if n <= 1:
-        return False
+#
+def removee(s,r):
+    #print(s)
+    if len(s)<2:
+        return s
+    if s[0]!=s[1]:
+        return s[0] + removee(s[1:],r)
+    count = 2
+    for i in range(1,r):
+        if count == r:
+            return removee(s[r:],r)
+        if s[i] == s[i+1]:
+            count+=1
 
-    # check from 2 to n-1
-    for i in range(2, n):
-        if n % i == 0:
-            return False
+s = input()
+r = int(input())
 
-    return True
-
-
-# Function to print primes
-def printPrime(n):
-    for i in range(2, n + 1):
-        if isPrime(i):
-            print(i, end=" ")
-
-n=89
-printPrime(n)
+s = removee(s,r)
+print(removee(s,r))
 
