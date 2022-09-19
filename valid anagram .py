@@ -29,3 +29,5 @@ class Solution:
                 dict[ele] -= 1
         return False if any(dict.values()) else True
         
+#THREE WAY
+ return sorted(s) == sorted(t)
