@@ -1,23 +1,34 @@
-# Python3 program to print
-# all primes less than N
+from pytube import YouTube
 
-#
-def removee(s,r):
-    #print(s)
-    if len(s)<2:
-        return s
-    if s[0]!=s[1]:
-        return s[0] + removee(s[1:],r)
-    count = 2
-    for i in range(1,r):
-        if count == r:
-            return removee(s[r:],r)
-        if s[i] == s[i+1]:
-            count+=1
+# where to save
+SAVE_PATH = "E:/"  # to_do
 
-s = input()
-r = int(input())
+# link of the video to be downloaded
+# opening the file
+link = open('links_file.txt', 'r')
 
-s = removee(s,r)
-print(removee(s,r))
+for i in link:
+    try:
+
+        # object creation using YouTube
+        # which was imported in the beginning
+        yt = YouTube(i)
+    except:
+
+        # to handle exception
+        print("Connection Error")
+
+    # filters out all the files with "mp4" extension
+    mp4files = yt.filter('mp4')
+
+    # get the video with the extension and
+    # resolution passed in the get() function
+    d_video = yt.get(mp4files[-1].extension, mp4files[-1].resolution)
+    try:
+
+        # downloading the video
+        d_video.download(SAVE_PATH)
+    except:
+        print("Some Error!")
+print('Task Completed!')
 
