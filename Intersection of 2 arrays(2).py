@@ -9,7 +9,11 @@ print(Intersection(lst1, lst2))
 # Approach 2
 def inter (nums1,nums2):
   res=[]
-  for i in nums:
+  for i in nums1:
     if i not in res and i in nums2:
       res.append(i)
   return res
+
+# approach 3
+def intersection(lst1, lst2):
+    return list(set(lst1) & set(lst2))
