@@ -19,3 +19,12 @@ class Solution:
             if c1>c2:
                 c2=c1
         return c2
+    
+    
+ #Approach 3
+class Solution:
+    def findMaxConsecutiveOnes(self, nums: List[int]) -> int:
+        for i in range(1,len(nums)) :
+            if nums[i] :
+                nums[i] += nums[i-1]
+        return max(nums)
